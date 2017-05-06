@@ -237,60 +237,39 @@
 				
 
 				<p><button id="fat-btn" data-loading-text="loading..." class="btn btn-primary">上传</button></p>
-                 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="nav" style="width: 800px;height:600px"></div>
-    <!-- ECharts单文件引入 -->
-    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
-    <script type="text/javascript">
-        // 路径配置
-        require.config({
-            paths: {
-                echarts: 'http://echarts.baidu.com/build/dist'
-            }
-        });
-        
-        // 使用
-        require(
-            [
-                'echarts',
-                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
-            ],
-            function (ec) {
-                // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('nav')); 
                 
-                var option = {
-                    tooltip: {
-                        show: true
-                    },
-                    legend: {
-                        data:['销量']
-                    },
-                    xAxis : [
-                        {
-                            type : 'category',
-                            data : ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-                        }
-                    ],
-                    yAxis : [
-                        {
-                            type : 'value'
-                        }
-                    ],
-                    series : [
-                        {
-                            "name":"销量",
-                            "type":"bar",
-                            "data":[5, 20, 40, 10, 10, 20]
-                        }
-                    ]
-                };
-        
-                // 为echarts对象加载数据 
-                myChart.setOption(option); 
-            }
-        );
-    </script>
+                <!-- ***为ECharts准备一个具备大小（宽高）的Dom -->
+    			<div id="content_chart" style="width: 800px;height:600px"></div>
+    			<!-- ECharts单文件引入  <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>   -->
+    			<script src="/static/js/echarts.min.js"></script>
+    			<script type="text/javascript">
+        		// 基于准备好的dom，初始化echarts实例
+        		var myChart = echarts.init(document.getElementById('content_chart'));
+
+        		// 指定图表的配置项和数据
+        		var option = {
+            		title: {
+                		text: 'ECharts 入门示例'
+            		},
+            		tooltip: {},
+            		legend: {
+                		data:['销量']
+            		},
+            		xAxis: {
+                		data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            		},
+            		yAxis: {},
+            		series: [{
+                		name: '销量',
+                		type: 'bar',
+                		data: [5, 20, 36, 10, 10, 20]
+            		}]
+       	 		};
+
+        		// 使用刚指定的配置项和数据显示图表。
+       			 myChart.setOption(option);
+    		</script>
+    			<!-- ***图表 -->
 
 			</div>
 		</div>
@@ -307,7 +286,6 @@
 <script src="/static/plugins/fullPage/jquery.fullPage.min.js"></script>
 <script src="/static/plugins/fullPage/jquery.jdirk.min.js"></script>
 <script src="/static/plugins/jquery.cookie.js"></script>
-
 <script src="/static/js/admin.js"></script>
 </body>
 </html>
