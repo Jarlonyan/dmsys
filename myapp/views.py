@@ -10,6 +10,8 @@ def index(request):
 	# model_param={}
 	# model_param['webname']="company公司网站"
 	# return render_to_response('index.html')
-
-
 	return render(request, 'index.html')   #
+
+
+def classification(request):
+	return render(request, 'classification.html')

@@ -134,7 +134,7 @@
 <section id="main">
 	<!-- 左侧导航区 -->
 	<aside id="sidebar">
-		<!-- 个人资料区 -->
+		<!-- 任务选项区 -->
 		<div class="s-profile">
 			<a class="waves-effect waves-light" href="javascript:;">
 				<div class="sp-pic">
@@ -142,24 +142,16 @@
 				</div>
 			</a>
 		</div>
-		<!-- /个人资料区 -->
+		<!-- 任务选项区 -->
 		<!-- 菜单区 -->
 		<ul class="main-menu">
 			<li>
-			<a class="waves-effect" href="javascript:Tab.addTab('首页', 'home');"><i class="zmdi zmdi-home"></i> 首页</a>
+			<a class="waves-effect" href="javascript:Tab.addTab('数据统计分析', 'home');"><i class="zmdi zmdi-home"></i> 数据统计分析</a>
 			</li>
-			<li class="sub-menu system_menus system_1 0">
-			<a class="waves-effect" href="javascript:;"><i class="zmdi zmdi-accounts-list"></i> 数据统计分析</a>
+			<li>
+			<a class="waves-effect" href="javascript:Tab.addTab('分类', '/classification');"><i class="zmdi zmdi-accounts"></i> 分类 </a>
 			</li>
-			<li class="sub-menu system_menus system_1 3">
-			<a class="waves-effect" href="javascript:;"><i class="zmdi zmdi-accounts"></i> 分类 </a>
-			<ul>
-				<li><a class="waves-effect" href="javascript:Tab.addTab('角色管理', '/manage/role/index');">Logistic Regression</a></li>
-				<li><a class="waves-effect" href="javascript:Tab.addTab('用户管理', '/manage/user/index');">SVM</a></li>
-				<li><a class="waves-effect" href="javascript:Tab.addTab('用户管理', '/manage/user/index');">GBDT</a></li>
-				<li><a class="waves-effect" href="javascript:Tab.addTab('用户管理', '/manage/user/index');">ANN</a></li>
-			</ul>
-			</li>
+
 			<li class="sub-menu system_menus system_1 6">
 			<a class="waves-effect" href="javascript:;"><i class="zmdi zmdi-lock-outline"></i> 聚类</a>
 			<ul>
@@ -176,22 +168,7 @@
 				<li><a class="waves-effect" href="javascript:Tab.addTab('日志记录', '/manage/log/index');">LPA</a></li>
 				<li><a class="waves-effect" href="javascript:Tab.addTab('键值设置', '/manage/map/index');">RandomWalk</a></li>
 			</ul>
-			</li>
-			<li class="sub-menu system_menus system_2 12" style="display:none;">
-			<a class="waves-effect" href="javascript:;"><i class="zmdi zmdi-menu"></i> 标签类目管理</a>
-			<ul>
-				<li><a class="waves-effect" href="javascript:Tab.addTab('标签管理', '/manage/tag/index');">标签管理</a></li>
-				<li><a class="waves-effect" href="javascript:Tab.addTab('类目管理', '/manage/category/index');">类目管理</a></li>
-			</ul>
-			</li>
-			<li class="sub-menu system_menus system_2 15" style="display:none;">
-			<a class="waves-effect" href="javascript:;"><i class="zmdi zmdi-collection-text"></i> 文章内容管理</a>
-			<ul>
-				<li><a class="waves-effect" href="javascript:Tab.addTab('文章管理', '/manage/article/index');">文章管理</a></li>
-				<li><a class="waves-effect" href="javascript:Tab.addTab('回收管理', '/manage/article/recycle');">回收管理</a></li>
-			</ul>
-			</li>
-			<li>
+
 			<div class="upms-version">
 				&copy; 
 			</div>
@@ -215,28 +192,11 @@
 			</ul>
 		</div>
 		<div class="content_main">
-			<div id="iframe_home" class="iframe cur">			
+			<div id="iframe_home" class="iframe cur">	
 
-				<p> 
-					<button id="fat-btn" data-loading-text="loading..." class="btn btn-primary">上传文件</button>
-                    
-                </p>
-
-				<div class="form-group"> 
-					<div class="col-md-4"> 
-						<p>
-                  			{% block pic_widget %}  
-				  			{% endblock %}
-                		</p>
-					</div> 		
-
-					<div class="col-md-4"> 
-						<p>
-                  			{% block pic_widget2 %}  
-				  			{% endblock %}
-                		</p>
-					</div> 
-				</div>
+                  	{% block main_widget %}  
+				  	{% endblock %}
+                
 			</div>
 		</div>
 	</section>
