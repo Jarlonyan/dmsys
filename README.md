@@ -28,7 +28,7 @@ igraph ： 也是网络分析库，带有比较多的社区发现算法
 
 # 3. 参考
 
-Bootstrap上传文件插件，[参考](http://caiknife.github.io/blog/2014/02/24/bootstrap-filestyle/)
+Bootstrap上传文件插件，用的是[Bootstrap FileStyle](http://caiknife.github.io/blog/2014/02/24/bootstrap-filestyle/)
 
 
 # 4. 致谢

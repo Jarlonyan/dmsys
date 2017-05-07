@@ -18,6 +18,7 @@
 
   <style> 
   .divcss_maincontent{ padding-left:30px;padding-right:30px;padding-top:30px;padding-bottom:30px} 
+  .divcss_train_test_widget{ padding-left:30px} 
   </style> 
 
 </head>
@@ -48,24 +49,48 @@
     </script>
   </div>
 
+
 <div class="radio">
-    <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>训练集和测试集</label>
-    <div class="content" style="width:300px;">
-      训练集:<input type="file" class="filestyle" style="width:120px;">
-      <script type="text/javascript">
-        $(':file').filestyle();
-      </script>
+    <label> 
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      <p class="lead">训练集和测试集</p>
+    </label>
+
+
+    <div class="form-group" style="width:500px;">
+        <div class="col-md-3">
+          <label class="lead"> 训练集: </label>
+        </div>
+        <div class="col-md-8">
+          <input type="file" class="filestyle" >
+            <script type="text/javascript">
+              $(':file').filestyle();
+            </script>
+        </div>
     </div>
-    
-    <div class="content" style="width:300px;">
-      测试集:<input type="file" class="filestyle" style="width:120px;">
-      <script type="text/javascript">
-        $(':file').filestyle();
-      </script>
+    <br/><br/>
+        
+    <div class="form-group" style="width:500px;">
+      <div class="col-md-3">
+        <label class="lead"> 测试集: </label>
+      </div>
+      <div class="col-md-8">
+        <input type="file" class="filestyle" >
+          <script type="text/javascript">
+            $(':file').filestyle();
+          </script>
+      </div>
     </div>
-</div>
+    <br/>
+
+  </div>
+
+
 <div class="radio">
-   <label> <input type="radio" name="optionsRadios" id="optionsRadios2"  value="option2">Cross-Validation</label>
+   <label> 
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      <p class="lead">Cross_Validation</p>
+    </label>
    <p> 10 folds </p>
 </div>
 

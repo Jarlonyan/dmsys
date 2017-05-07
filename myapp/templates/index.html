@@ -5,7 +5,13 @@
 <div class="form-group"> 
 	<div class="col-md-4" style="width: 800px;height:600px"> 
 	<p>
-		<p> <button id="fat-btn" data-loading-text="loading..." class="btn btn-primary">上传文件</button> </p>
+		<div class="content" style="width:300px;">
+    		<input type="file" class="filestyle" data-buttonName="btn-primary">
+    		<script type="text/javascript">
+      			$(":file").filestyle({buttonName: "btn-primary"});
+    		</script>
+  		</div>
+
 		<table class="table table-bordered">
   			<caption>特征信息</caption>
   			<thead>
