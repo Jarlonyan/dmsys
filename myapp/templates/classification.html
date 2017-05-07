@@ -41,31 +41,28 @@
   </nav>
 
 
-
-
- 
-<input type="file" name="file" id="file" style="display:none">
-<div class="input-append">
-   <input id="uploadurl" class="input-large" type="text" disabled>
-   <a class="btn btn-info" onclick="$('input[id=file]').click();">
-    <i class="icon-folder-open-alt"></i> 浏览文件
-   </a>
-</div>
- 
-<script type="text/javascript">
-$('input[id=file]').change(function() {
-  var path = $(this).val();
-  path = path.split('\\');
-  path = path[path.length-1];
-  $('#uploadurl').val(path);
-});
-</script>
-
+  <div class="content" style="width:300px;">
+    <input type="file" class="filestyle" style="width:120px;">
+    <script type="text/javascript">
+      $(':file').filestyle();
+    </script>
+  </div>
 
 <div class="radio">
     <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>训练集和测试集</label>
-    <p> 训练集：<input type="file" >  </p>
-    <p> 测试集：<input type="file" >  </p>
+    <div class="content" style="width:300px;">
+      训练集:<input type="file" class="filestyle" style="width:120px;">
+      <script type="text/javascript">
+        $(':file').filestyle();
+      </script>
+    </div>
+    
+    <div class="content" style="width:300px;">
+      测试集:<input type="file" class="filestyle" style="width:120px;">
+      <script type="text/javascript">
+        $(':file').filestyle();
+      </script>
+    </div>
 </div>
 <div class="radio">
    <label> <input type="radio" name="optionsRadios" id="optionsRadios2"  value="option2">Cross-Validation</label>
@@ -83,14 +80,14 @@ $('input[id=file]').change(function() {
   <script src="/static/plugins/bootstrap-3.3.0/js/bootstrap.min.js"></script>
   <script src="/static/plugins/waves-0.7.5/waves.min.js"></script>
   <script src="/static/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="/static/plugins/BootstrapMenu.min.js"></script>  
+  <script src="/static/plugins/BootstrapMenu.min.js"></script>
   <script src="/static/plugins/device.min.js"></script>
   <script src="/static/plugins/fullPage/jquery.fullPage.min.js"></script>
   <script src="/static/plugins/fullPage/jquery.jdirk.min.js"></script>
   <script src="/static/plugins/jquery.cookie.js"></script>
   <script src="/static/js/admin.js"></script>
 
-  <script src="/static/plugins/bootstrap-fileinput/bootstrap-fileinput.min.js"></script>
+  <script type="text/javascript" src="/static/plugins/bootstrap-filestyle-1.2.1/src/bootstrap-filestyle.min.js"></script>
 
 
 </body>
