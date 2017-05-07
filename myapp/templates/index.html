@@ -5,12 +5,20 @@
 <div class="form-group"> 
 	<div class="col-md-4" style="width: 800px;height:600px"> 
 	<p>
-		<div class="content" style="width:300px;">
-    		<input type="file" class="filestyle" data-buttonName="btn-primary">
-    		<script type="text/javascript">
-      			$(":file").filestyle({buttonName: "btn-primary"});
-    		</script>
-  		</div>
+		<div class="form-group" style="width:600px;">
+        <div class="col-md-3" style="width:100">
+          <label class="lead"> 选择文件: </label>
+        </div>
+        <div class="col-md-5" style="width:350px;">
+          <input type="file" class="filestyle" data-buttonName="btn-primary">
+          <script type="text/javascript">
+            $(":file").filestyle({buttonName: "btn-primary"});
+          </script>
+        </div>
+        <div class="col-md-2">
+        	<button id="fat-btn" style="width:150px;" data-loading-text="loading..." class="btn btn-primary">提交</button>
+        </div>
+      	</div>
 
 		<table class="table table-bordered">
   			<caption>特征信息</caption>

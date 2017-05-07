@@ -22,6 +22,11 @@
   </style> 
 
 </head>
+
+
+
+
+
 <body>
 
 <div class="divcss_maincontent"  >
@@ -42,60 +47,66 @@
   </nav>
 
 
-<div class="form-group">
-  <div class="row-md-5">
-  <div class="radio">
-    <label> 
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      <p class="lead">训练集和测试集</p>
-    </label>
+  <div class="form-group">
+    <div class="row-md-5">
+    <div class="radio">
+      <label> 
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        <p class="lead">训练集和测试集</p>
+      </label>
 
 
-    <div class="form-group" style="width:500px;">
+      <div class="form-group" style="width:500px;">
+          <div class="col-md-3">
+            <label class="lead"> 训练集: </label>
+          </div>
+          <div class="col-md-8">
+            <input type="file" class="filestyle" data-buttonName="btn-primary">
+            <script type="text/javascript">
+              $(":file").filestyle({buttonName: "btn-primary"});
+            </script>
+          </div>
+      </div>
+      <br/><br/>
+        
+      <div class="form-group" style="width:500px;">
         <div class="col-md-3">
-          <label class="lead"> 训练集: </label>
+          <label class="lead"> 测试集: </label>
         </div>
         <div class="col-md-8">
-          <input type="file" class="filestyle" >
-            <script type="text/javascript">
-              $(':file').filestyle();
-            </script>
-        </div>
-    </div>
-    <br/><br/>
-        
-    <div class="form-group" style="width:500px;">
-      <div class="col-md-3">
-        <label class="lead"> 测试集: </label>
-      </div>
-      <div class="col-md-8">
-        <input type="file" class="filestyle" >
+          <input type="file" class="filestyle" data-buttonName="btn-primary">
           <script type="text/javascript">
-            $(':file').filestyle();
+            $(":file").filestyle({buttonName: "btn-primary"});
           </script>
+        </div>
       </div>
+      <br/><br/>
+
     </div>
-    <br/><br/>
+    </div>
 
-  </div>
-  </div>
-
-  <div class="row-md-5">
-  <div class="radio">
-   <label> 
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      <p class="lead">Cross_Validation</p>
-    </label>
-    <br/>
+    <div class="row-md-5">
+    <div class="radio">
+      <label> 
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        <p class="lead">Cross_Validation</p>
+      </label>
+      <br/>
     
-    <form class="form-inline" role="form" style="padding-left:20px;">
-      <div class="form-group">
-        <label class="lead">Folds  =   </label>
-        <input type="text" class="form-control">
-      </div>
-     </form>
+      <form class="form-inline" role="form" style="padding-left:20px;width:500px">
+        <div class="form-group">
+          <label class="lead">Folds  = &nbsp;&nbsp;&nbsp;  </label>
+          <input type="text" style="width:300px;" class="form-control">
+        </div>
+      </form>
 
-  </div>
+    </div>
+    </div>
+
+    <div class="row-md-5">
+      <br/><br/>
+      <button id="fat-btn" style="width:440px;" data-loading-text="loading..." class="btn btn-primary">开始运行</button>
+    </div>
   </div>
 </div>
 
