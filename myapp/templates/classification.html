@@ -27,30 +27,24 @@
 <div class="divcss_maincontent"  >
 
   <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-  <div class="navbar-header">
-    <a class="navbar-brand" href="#">分类模型：</a>
-  </div>
-  <div>
-    <ul class="nav navbar-nav">
-      <li class="active"> <a href="#">LogisticRegression</a></li> <li class="divider"></li>
-      <li><a href="#">SVM</a></li> <li class="divider"></li>
-      <li><a href="#">GBDT</a></li> <li class="divider"></li>
-    </ul>
-  </div>
-  </div>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">分类模型：</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="active"> <a href="#">LogisticRegression</a></li> <li class="divider"></li>
+          <li><a href="#">SVM</a></li> <li class="divider"></li>
+          <li><a href="#">GBDT</a></li> <li class="divider"></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
 
-  <div class="content" style="width:300px;">
-    <input type="file" class="filestyle" style="width:120px;">
-    <script type="text/javascript">
-      $(':file').filestyle();
-    </script>
-  </div>
-
-
-<div class="radio">
+<div class="form-group">
+  <div class="row-md-5">
+  <div class="radio">
     <label> 
       <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
       <p class="lead">训练集和测试集</p>
@@ -81,19 +75,29 @@
           </script>
       </div>
     </div>
-    <br/>
+    <br/><br/>
 
   </div>
+  </div>
 
-
-<div class="radio">
+  <div class="row-md-5">
+  <div class="radio">
    <label> 
       <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
       <p class="lead">Cross_Validation</p>
     </label>
-   <p> 10 folds </p>
-</div>
+    <br/>
+    
+    <form class="form-inline" role="form" style="padding-left:20px;">
+      <div class="form-group">
+        <label class="lead">Folds  =   </label>
+        <input type="text" class="form-control">
+      </div>
+     </form>
 
+  </div>
+  </div>
+</div>
 
 
 
