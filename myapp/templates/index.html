@@ -4,7 +4,7 @@
 
 
 <table class="table table-bordered">
-  <caption>特征</caption>
+  <caption>特征信息</caption>
   <thead>
     <tr>
       <th>No.</th>
@@ -43,6 +43,39 @@
   </tbody>
 </table>
 
+<button id="fat-btn" data-loading-text="loading..." class="btn btn-primary">单特征统计</button>
+
+<table class="table table-bordered">
+	<caption>单特征</caption>
+  	<thead>
+    	<tr>
+      		<th>统计项</th>
+      		<th>值</th>
+    	</tr>
+  	</thead>
+  	
+  	<tbody>
+    	<tr>
+      		<td>Maximum</td>
+      		<td>98</td>
+    	</tr>
+    	<tr>
+      		<td>Medium</td>
+      		<td>66</td>
+    	</tr>
+    	<tr>
+      		<td>Minimum</td>
+      		<td>3</td>
+    	</tr>
+    	<tr>
+      		<td>Mean</td>
+      		<td>68</td>
+    	</tr>
+  	</tbody>
+</table>
+
+
+
 
 {% endblock pic_widget %}
 
@@ -60,7 +93,7 @@ var myChart = echarts.init(document.getElementById('content_chart2'));
 // 指定图表的配置项和数据
 var option = {
     title: {
-         text: 'ECharts 入门示例'
+         text: '单特征统计信息'
     },
     tooltip: {},
     legend: {
