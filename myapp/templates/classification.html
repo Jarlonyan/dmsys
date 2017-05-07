@@ -14,18 +14,16 @@
   <link href="/static/css/admin.css" rel="stylesheet"/>
 
   <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.0/css/bootstrap.min.css">  
-  <script src="/static/plugins/jquery.1.12.4.min.min.js"></script>
-  <script src="/static/plugins/bootstrap-3.3.0/js/bootstrap.min.js"></script>
- 
+  <link rel="stylesheet" href="/static/plugins/bootstrap-fileinput/css/fileinput.min.css">  
+
+  <style> 
+  .divcss_maincontent{ padding-left:30px;padding-right:30px;padding-top:30px;padding-bottom:30px} 
+  </style> 
+
 </head>
 <body>
 
-<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-
-
-
-
-<div class="form-group" >
+<div class="divcss_maincontent"  >
 
   <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -45,22 +43,23 @@
 
 
 
-
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary">分类模型</button>
-    <button type="button" class="btn btn-primary dropdown-toggle"   data-toggle="dropdown">
-      <span class="caret"></span>
-      <span class="sr-only">切换下拉菜单</span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Lotistic Regression</a></li>  <li class="divider"></li>
-      <li><a href="#">SVM </a></li>   <li class="divider">  </li> 
-      <li><a href="#">GBDT</a></li>
-    </ul>
-    <a> select a model </a>
-  </div>
-
-
+ 
+<input type="file" name="file" id="file" style="display:none">
+<div class="input-append">
+   <input id="uploadurl" class="input-large" type="text" disabled>
+   <a class="btn btn-info" onclick="$('input[id=file]').click();">
+    <i class="icon-folder-open-alt"></i> 浏览文件
+   </a>
+</div>
+ 
+<script type="text/javascript">
+$('input[id=file]').change(function() {
+  var path = $(this).val();
+  path = path.split('\\');
+  path = path[path.length-1];
+  $('#uploadurl').val(path);
+});
+</script>
 
 
 <div class="radio">
@@ -90,6 +89,10 @@
   <script src="/static/plugins/fullPage/jquery.jdirk.min.js"></script>
   <script src="/static/plugins/jquery.cookie.js"></script>
   <script src="/static/js/admin.js"></script>
+
+  <script src="/static/plugins/bootstrap-fileinput/bootstrap-fileinput.min.js"></script>
+
+
 </body>
 </html>
 
