@@ -5,20 +5,17 @@
 <div class="form-group"> 
 	<div class="col-md-4" style="width: 800px;height:600px"> 
 	<p>
-		<div class="form-group" style="width:600px;">
-        <div class="col-md-3" style="width:100">
-          <label class="lead"> 选择文件: </label>
-        </div>
-        <div class="col-md-5" style="width:350px;">
-          <input type="file" class="filestyle" data-buttonName="btn-primary">
-          <script type="text/javascript">
-            $(":file").filestyle({buttonName: "btn-primary"});
-          </script>
-        </div>
-        <div class="col-md-2">
-        	<button id="fat-btn" style="width:150px;" data-loading-text="loading..." class="btn btn-primary">提交</button>
-        </div>
+		<div class="form-group" style="width:600px;" >
+        	<form name="fileuploadform" method="POST" style="padding-left:0px;" enctype="multipart/form-data" action="" > 
+        		{% csrf_token %}
+          		{{ uf }}
+          		
+        		<br/> <br/>
+        		<button id="fat-btn" type="submit" style="width:150px;" data-loading-text="loading..." class="btn btn-primary">提交</button>
+        		
+        	</form>
       	</div>
+      	
 
 		<table class="table table-bordered">
   			<caption>特征信息</caption>
@@ -51,7 +48,9 @@
 	</p>
 
 	<p>
-		<button id="fat-btn" data-loading-text="loading..." class="btn btn-primary">单特征统计</button>
+		<button id="fat-btn" data-loading-text="loading..." style="width:150px;" class="btn btn-primary">单特征统计</button>
+		
+	
 		<table class="table table-bordered">
 			<caption>单特征</caption>
   			<thead>
